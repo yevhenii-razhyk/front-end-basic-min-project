@@ -1,0 +1,153 @@
+.team {
+    &__inner {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    &__title {
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &-item {
+            margin-bottom: 30px;
+            &-wrapper {
+                &-picture {
+                    margin-bottom: 15px;
+                    border-radius: 12px;
+                    &-image {
+                        vertical-align: top;
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 12px;
+                        &--01 {
+                            background-color: $green;
+                        }
+                        &--02 {
+                            background-color: $blue;
+                        }
+                        &--03 {
+                            background-color: $light-salmon;
+                        }
+                        &--04 {
+                            background-color: $main-regular;
+                        }
+                        &--05 {
+                            background-color: $brown;
+                        }
+                        &--06 {
+                            background-color: $main-alt;
+                        }
+                    }
+                }
+                &-member {
+                    display: grid;
+                    grid-template-columns: 1fr min-content;
+                    grid-template-rows: min-content min-content;
+                    grid-template-areas: "name link"
+                                         "capacity link";
+                    &-name {
+                        grid-area: name;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: $main-regular;
+                        padding-bottom: 5px;
+                    }
+                    &-capacity {
+                        grid-area: capacity;
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: $text;
+                    }
+                    &-link {
+                        grid-area: link;
+                        width: 32px;
+                        height: 32px;
+                        background-color: $bg;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+                        transition-duration: 0.3s;
+                        transition-property: background-color;
+                        & path {
+                            transition-duration: 0.3s;
+                            transition-property: stroke;
+                        }
+                        &:hover path {
+                            stroke: $accent;
+                        }
+                        &:hover {
+                            background-color: $bg-alt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team {
+        &__inner {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+            padding-bottom: 60px;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -30px;
+            &-item {
+                padding: 0 30px;
+                width: 50%;
+                margin-bottom: 60px;
+                &-wrapper {
+                    &-picture {
+                        &-image {
+                            height: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .team {
+        &__title {
+            max-width: 664px;
+            margin: 0 auto;
+        }
+        &__list {
+            &-item {
+                width: 33.333%;
+                &-wrapper {
+                    &-member-capacity {
+                        max-width: 214px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1320px) {
+    .team {
+        &__title {
+            max-width: 1080px;
+        }
+        &__list-item-wrapper-member-capacity {
+            max-width: unset;
+        }
+    }
+}

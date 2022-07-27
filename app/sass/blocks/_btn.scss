@@ -1,0 +1,27 @@
+.btn {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+        outline: 2px dotted $blue;
+    }
+    &--text-active {
+        background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #F0145A;
+    }
+    &--close {
+        border-radius: 8px;
+        & svg {
+            vertical-align: top;
+        }
+        &:hover {
+            background-color: $separator;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    min-width: 315px;
+    margin: 0;
+    &__modal {
+        position: fixed;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+a {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: $active-regular;
+    &:hover{
+        color: $accent;
+    }
+    &:focus {
+        outline: 2px dotted $blue;
+    }
+}
+
+.container {
+    max-width: 1380px;
+    min-width: 315px;
+    padding: 0 30px;
+    margin: 0 auto;
+    &--big {
+        max-width: 1440px;
+        padding: 0;
+    }
+}
+
+.current-page {
+    background-color: #F0145A;
+}
+
+.active {
+    color: $accent;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 60px;
+        &--big {
+            padding: 0;
+        }
+    }
+
+    .active::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: $accent;
+    }
+}
+
+@media (min-width: 1320px) {
+    .container {
+        padding: 0 30px;
+        &--big {
+            padding: 0;
+        }
+    }
+}

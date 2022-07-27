@@ -1,0 +1,97 @@
+.achievements {
+    background-color: $bg;
+    &__inner {
+        padding-top: 29px;
+        position: relative;
+        padding-bottom: 78px;
+    }
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $main-regular;
+        padding-bottom: 30px;
+    }
+    &__list {
+        &-wrapper {
+            &--02,
+            &--03,
+            &--04 {
+                display: none;
+            }
+            &-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 255px;
+                height: 90px;
+                background-color: $white;
+                border-radius: 12px;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__image {
+        vertical-align: top;
+    }
+    &__slider-dots {
+        margin: 0;
+        position: absolute;
+        bottom: 30px;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .achievements {
+        &__inner {
+            padding-top: 26px;
+        }
+        &__list {
+            display:  flex;
+            justify-content: space-between;
+            &-wrapper {
+                &--02,
+                &--03,
+                &--04 {
+                    display: inline-flex;
+                }
+                &-item {
+                    margin: 0;
+                    width: 132px;
+                }
+            }
+        }
+        &__slider-dots {
+            bottom: 28px;
+            &-item {
+                &--04,
+                &--05,
+                &--06 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .achievements__inner {
+        padding-top: 28px;
+    }
+    .achievements__list-wrapper-item {
+        width: 196px;
+        height: 110px;
+    }
+}
+
+@media (min-width: 1320px) {
+    .achievements__list-wrapper-item {
+        width: 300px;
+    }
+}

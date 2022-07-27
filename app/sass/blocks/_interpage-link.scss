@@ -1,0 +1,26 @@
+.interpage-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    align-self: flex-start;
+    transition-duration: 0.3s;
+    transition-property: color;
+    & svg {
+        margin-left: 6px;
+        & path {
+            transition-duration: 0.3s;
+            transition-property: stroke;
+        }
+    }
+    &:hover path{
+        stroke: $accent;
+    }
+    &:focus {
+        outline: 2px dotted $blue;
+    }
+}
+

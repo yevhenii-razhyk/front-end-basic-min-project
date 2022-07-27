@@ -1,0 +1,139 @@
+.team-member {
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    &__photo {
+        margin-bottom: 32px;
+        border-radius: 12px;
+        &-image {
+            height: 375px;
+            width: 100%;
+            object-fit: cover;
+            vertical-align: top;
+            border-radius: 12px;
+            background-color: $brown;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        margin: 0;
+        padding-bottom: 15px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        &-capacity {
+            font-size: 14px;
+            line-height: 22px;
+            margin: 0;
+            color: $text;
+            padding-bottom: 10px;
+        }
+        &-link {
+            align-self: flex-start;
+            transition-duration: 0.3s;
+            transition-property: color;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__bio {
+        border-top: 4px solid $separator;
+        padding-top: 30px;
+        &-description {
+            margin: 0;
+            padding-bottom: 20px;
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+            padding-top: 8px;
+            padding-bottom: 17px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team-member {
+        &__inner {
+            padding-top: 0;
+            display: grid;
+            grid-template-columns: 46% 1fr;
+            grid-template-rows: min-content min-content min-content;
+            grid-template-areas: "photo title"
+                                 "photo info"
+                                 "bio bio";
+            column-gap: 30px;
+            padding-bottom: 35px;
+        }
+        &__photo {
+            grid-area: photo;
+            margin-bottom: 30px;
+        }
+        &__title {
+            grid-area: title;
+            align-self: flex-end;
+        }
+        &__info {
+            grid-area: info;
+        }
+        &__bio {
+            grid-area: bio;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .team-member {
+        &__inner {
+            grid-template-columns: 33% 1fr;
+            grid-template-areas: "photo title"
+                                 "photo info"
+                                 "photo bio";
+            column-gap: 60px;
+            padding-bottom: 38px;
+        }
+    }
+}
+
+@media (min-width: 1320px) {
+    .team-member {
+        &__inner {
+            grid-template-columns: 37% 1fr;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        &__info {
+            flex-direction: row;
+            padding-bottom: 20px;
+            &-link {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                &::before {
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    background-color: $separator;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                }
+            }
+        }
+        &__photo {
+            &-image {
+                height: 500px;
+            }
+        }
+    }
+}

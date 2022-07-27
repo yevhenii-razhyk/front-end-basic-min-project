@@ -1,0 +1,22 @@
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    &--small {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &--medium {
+        font-size: 38px;
+        line-height: 46px;
+    }
+    &--white {
+        color: $white;
+    }
+    &--red {
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #EF8080;
+    }
+}

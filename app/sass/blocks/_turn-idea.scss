@@ -1,0 +1,115 @@
+.turn-idea {
+    &__inner {
+        padding-top: 26px;
+        margin-bottom: 25px;
+        &-button-list {
+            display: flex;
+            align-items: center;
+            overflow: auto;
+            margin-right: -30px;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            border-top: 4px solid rgba(255, 255, 255, 0.3);
+            margin: 30px 0 30px;
+            padding-top: 30px;
+        }
+    }
+    &__btn {
+        flex-shrink: 0;
+        margin-right: 30px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        color: $text;
+    }
+}
+
+@media (min-width: 768px) {
+    .turn-idea {
+        &__inner {
+            padding-top: 58px;
+            margin-bottom: 58px;
+            &-button-list {
+                margin-left: 0px;
+                margin-right: -60px;
+            }
+            &-title {
+                font-size: 30px;
+                line-height: 37px;
+                margin-top: 60px;
+                padding-top: 60px;
+            }
+        }
+        &__btn {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .turn-idea {
+        &__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto min-content;
+            grid-template-areas: "buttons title"
+                                 "buttons description";
+            padding-top: 55px;
+            &-button-list {
+                grid-area: buttons;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-right: 43px;
+                margin-left: 0;
+                margin-right: 12px;
+                padding-right: 30px;
+                border-right: 4px solid rgba(255, 255, 255, 0.3);
+            }
+            &-title {
+                grid-area: title;
+                border: none;
+                margin: 10px 0 30px 48px;
+                padding: 0;
+            }
+            &-description {
+                grid-area: description;
+                margin: 0 0 0 48px;
+            }
+        }
+        &__btn {
+            text-align: right;
+            margin-bottom: 15px;
+            padding-top: 15px;
+        }
+    }
+}
+
+@media (min-width: 1320px) {
+    .turn-idea {
+        &__inner {
+            grid-template-columns: auto auto;
+            &-button-list {
+                margin-right: 30px;
+            }
+            &-title {
+                line-height: 25px;
+                margin: 48px 0 35px 30px;
+                max-width: 581px;
+            }
+            &-description {
+                margin: 0 0 0 30px;
+                max-width: 581px;
+            }
+        }
+    }
+}

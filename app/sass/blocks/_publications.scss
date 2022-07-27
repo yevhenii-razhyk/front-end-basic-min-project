@@ -1,0 +1,123 @@
+.publications {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    background-color: $bg;
+    padding-top: 28px;
+    &__interpage-link{
+        margin-bottom: 5px;
+    }
+    &__title{
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    &__list {
+        &-wrapper {
+            padding-bottom: 30px;
+        }
+        &-wrapper {
+            &-item {
+                background-color: $white;
+                border-radius: 8px;
+                &-image {
+                    &-picture {
+                        height: 200px;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 8px 8px 0px 0px;
+                        vertical-align: top;
+                        &--01 {
+                            background-color: $white;
+                        }
+                        &--02 {
+                            background-color: $blue;
+                        }
+                        &--03 {
+                            background-color: $light-salmon;
+                        }
+                        &--04 {
+                            background-color: $main-soft;
+                        }
+                        &--05 {
+                            background-color: $red;
+                        }
+                    }
+                }
+                &-title {
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                    cursor: pointer;
+                    align-self: flex-start;
+                    transition-duration: 0.3s;
+                    transition-property: color;
+                }
+                &-body-info {
+                    padding: 30px 30px 17px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                &-date {
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: $text;
+                }
+                &-description {
+                    border-top: 4px solid $separator;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    &__button-blue {
+        align-self: center;
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .publications {
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            &-wrapper {
+                width: 50%;
+                padding: 0 15px;
+                margin-bottom: 30px;
+                &--bottom {
+                    width: 100%;
+                }
+                &-item {
+                    height: 100%;
+                }
+            }
+        }
+        &__interpage-link {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .publications {
+        padding-top: 32px;
+        &__list {
+            display: flex;
+            &-wrapper {
+                width: 33.333%;
+                &:not(:last-child) {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

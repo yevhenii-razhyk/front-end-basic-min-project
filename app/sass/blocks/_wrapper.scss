@@ -1,0 +1,51 @@
+.wrapper {
+    background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
+    padding-bottom: 30px;
+    &__turn-idea {
+        max-width: 1350px;
+        margin: 0 auto;
+    }
+    &__header {
+        margin-bottom: 30px;
+    }
+    &__image {
+        background-image: url("../img/background.svg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 523px 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        padding-bottom: 4px;
+        &__header {
+            margin-bottom: 60px;
+        }
+        &__image {
+            background-size: 894px 1024px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        &__header {
+            margin-bottom: 55px;
+        }
+        &__image {
+            background-size: 670px 768px;
+        }
+    }
+}
+
+@media (min-width: 1320px) {
+    .wrapper {
+        padding-bottom: 0;
+        &__image {
+            background-size: 697px 799px;
+        }
+    }
+}

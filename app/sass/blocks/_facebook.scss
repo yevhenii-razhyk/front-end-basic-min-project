@@ -1,0 +1,12 @@
+.facebook {
+    & path {
+        transition-duration: 0.3s;
+        transition-property: fill;
+    }
+    &:hover path {
+        fill: $accent;
+    }
+    &--gray path {
+        fill: $text;
+    }
+}

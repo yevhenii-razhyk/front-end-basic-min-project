@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg;
+    padding: 30px;
+    &__btn {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    &__answer {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $text;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+    &__button-blue {
+        margin-top: 15px;
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 27px;
+    }
+}

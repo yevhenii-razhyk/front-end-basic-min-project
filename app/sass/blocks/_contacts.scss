@@ -1,0 +1,100 @@
+.contacts {
+    &__inner {
+        padding-bottom: 27px;
+        padding-top: 30px;
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        &-street{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 4px solid $separator;
+            &-address {
+                font-size: 21px;
+                line-height: 30px;
+            }
+        }
+        &-social {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 30px;
+            border-bottom: 4px solid $separator;
+        }
+        &-tel {
+            font-size: 21px;
+            line-height: 30px;
+            margin-bottom: 15px;
+            align-self: flex-start;
+            &:hover {
+                color: $main-alt;
+            }
+        }
+        &-mail {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 30px;
+            align-self: flex-start;
+        }
+        &-our-page {
+            margin-top: 30px;
+            align-self: flex-start;
+            margin-bottom: 27px;
+            &:hover path {
+                fill: $accent;
+            }
+            &-text {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                display: inline-block;
+                vertical-align: top;
+                max-width: 110px;
+                padding-top: 5px;
+                padding-left: 5px;
+            }
+        }
+    }
+    &__form {
+        border-radius: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts__data-our-page {
+        margin-bottom: 56px;
+    }
+    .contacts__inner {
+        padding-bottom: 58px;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .contacts {
+        &__inner {
+            display: flex;
+            margin: 0 -30px;
+        }
+        &__data {
+            width: 50%;
+            padding: 0 30px;
+        }
+        &__form-wrapper {
+            width: 50%;
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (min-width: 1320px) {
+    .contacts {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+

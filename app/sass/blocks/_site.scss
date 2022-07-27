@@ -1,0 +1,38 @@
+.site {
+    &__wrapper {
+        position: relative;
+        margin-bottom: 80px;
+        &::before {
+            content: "";
+            width: calc(100% - 40px);
+            height: 10px;
+            background-color: #CACADB;
+            border-radius: 0px 0px 12px 12px;
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+        }
+        &::after {
+            content: "";
+            width: calc(100% - 80px);
+            height: 10px;
+            background-color: #E7E7F2;
+            border-radius: 0px 0px 12px 12px;
+            position: absolute;
+            bottom: -20px;
+            left: 40px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .site__header {
+        padding-bottom: 65px;
+    }
+}
+
+@media (min-width: 992px) {
+    .site__header {
+        padding-bottom: 60px;
+    }
+}

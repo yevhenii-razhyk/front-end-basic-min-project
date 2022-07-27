@@ -1,0 +1,98 @@
+.partners {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $main-regular;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+    &__logo-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 120px;
+                & img {
+                    vertical-align: top;
+                }
+            &--01 {
+                background-color: #1C4280;
+            }
+            &--02 {
+                background-color: #143646;
+            }
+            &--03 {
+                background-color: #F48B30;
+            }
+            &--04 {
+                background-color: #9E4DC3;
+            }
+            &--05 {
+                background-color: #FD9339
+            }
+            &--06 {
+                background-color: #E2E2E4;
+            }
+            &--07 {
+                background-color: #C71C36;
+                display: none;
+            }
+            &--08 {
+                background-color: #DCF3F9;
+                display: none;
+            }
+            &--09 {
+                background-color: #EAEAEA;
+                display: none;
+            }
+            &--10 {
+                background-color: #282240;
+                display: none;
+            }
+            &--11 {
+                background-color: #1D4568;
+                display: none;
+            }
+            &--12 {
+                background-color: #000000;
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .partners {
+        &__logo-list {
+            display: flex;
+            flex-wrap: wrap;
+            &-item {
+                width: 33.333%;
+                &--07,
+                &--08,
+                &--09,
+                &--10,
+                &--11,
+                &--12 {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .partners__logo-list-item {
+        width: 25%;
+    }
+}
